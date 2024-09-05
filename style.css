@@ -152,17 +152,16 @@ nav {
   font-size: 1rem;
   max-width: 38%;
 }
-li {
-  list-style-type: none;
-}
 h3 {
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
   color: var(--DARK_BLUE);
 }
-.second_head,
-.third_head {
+.numbered_items li:nth-child(2) div {
+  margin-top: 1.2rem;
+}
+.numbered_items li:nth-child(3) div {
   margin-top: 1.2rem;
 }
 .list_info1,
@@ -174,16 +173,38 @@ h3 {
   margin-top: 1rem;
 }
 .list_info1 {
-  border: 1px solid red;
-  max-width: 45%;
+  max-width: 51%;
 }
 .list_info2 {
-  border: 1px solid red;
-  max-width: 48%;
+  max-width: 52%;
 }
 .list_info3 {
-  border: 1px solid red;
   max-width: 45%;
+}
+.numbered_items {
+  list-style-type: none;
+  counter-reset: count;
+}
+.numbered_items li {
+  counter-increment: count;
+}
+.numbered_items div {
+  border: 1px solid blue;
+  display: grid;
+  align-items: center;
+  column-gap: 1rem;
+  grid-template-columns: min-content 1fr;
+}
+.numbered_items p {
+  grid-column: 2 / -1;
+}
+.numbered_items div::before {
+  content: "0" counter(count);
+  background-color: var(--BRIGHT_RED);
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100vw;
 }
 .statements_headline {
   font-size: 2rem;
