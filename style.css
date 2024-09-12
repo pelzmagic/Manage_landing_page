@@ -224,7 +224,6 @@ h3 {
 } */
 .card {
   width: 100%;
-  height: 100%;
   /* border: 1px solid red; */
   background-color: rgba(231, 225, 225, 0.788);
   position: relative;
@@ -258,48 +257,24 @@ h4 {
   text-align: center; */
   margin-top: 1rem;
 }
-.main_carousel {
-  display: block;
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slider_container {
+  margin-top: 2rem;
   border: 1px solid blue;
-  position: relative;
-  width: 100%;
-  height: 350px;
 }
-.carousel {
-  border: 1px solid green;
-  position: relative;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.slider_container:hover .card_slide {
+  animation-play-state: paused;
 }
-.carousel_track_container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid black;
-}
-.carousel_card {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 30%;
-}
-.previous_carousel_button {
-  border: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-.next_carousel_button {
-  border: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 1000;
-  transform: translateY(-50%);
+.card_slide {
+  display: flex;
+  gap: 1.5rem;
+  animation: 15s slide infinite linear;
 }
