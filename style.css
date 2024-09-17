@@ -217,11 +217,6 @@ h3 {
   border: 1px solid red;
   margin-top: 2rem;
 }
-/* .card_container {
-  border: 1px solid blue;
-  max-width: 30%;
-  position: relative;
-} */
 .card {
   width: 100%;
   /* border: 1px solid red; */
@@ -232,10 +227,6 @@ h3 {
   border: 1px solid red;
   width: 5rem;
   margin: auto;
-  /* position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); */
 }
 .anisha,
 .ali,
@@ -252,29 +243,32 @@ h4 {
   font-family: inherit;
   color: var(--DARK_GRAYISH_BLUE);
   border: 1px solid blue;
-  /* width: 67%; */
-  /* margin: auto;
-  text-align: center; */
+  width: 58%;
+  margin: auto;
+  text-align: center;
   margin-top: 1rem;
 }
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 .slider_container {
-  margin-top: 2rem;
   border: 1px solid blue;
-}
-.slider_container:hover .card_slide {
-  animation-play-state: paused;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
 }
 .card_slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   display: flex;
-  gap: 1.5rem;
-  animation: 15s slide infinite linear;
+  width: 3000px;
+  will-change: transform;
+  gap: 1rem;
+}
+.card:nth-child(2) .avartar_details {
+  width: 65%;
+}
+.card:nth-child(3) .avartar_details {
+  width: 63%;
 }
