@@ -6,7 +6,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  overscroll-behavior-y: none;
+}
+/* body::-webkit-scrollbar {
+  display: none;
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -49,6 +54,9 @@ a {
 .nav_list {
   list-style-type: none;
 }
+a:hover {
+  color: var(--DARK_GRAYISH_BLUE);
+}
 nav {
   width: 25%;
 }
@@ -71,6 +79,10 @@ nav {
   font-size: 0.8rem;
   border-radius: 10px;
   border: 0;
+  cursor: pointer;
+}
+.get_started:hover {
+  background-color: hsl(12, 83%, 82%);
 }
 .second_section {
   border: 1px solid green;
@@ -120,6 +132,10 @@ nav {
   font-size: 0.8rem;
   border-radius: 10px;
   border: 0;
+  cursor: pointer;
+}
+.call_to_action:hover {
+  background-color: hsl(12, 83%, 82%);
 }
 .more_info {
   border: 1px solid red;
@@ -216,6 +232,7 @@ h3 {
 .testimonial {
   border: 1px solid red;
   margin-top: 2rem;
+  /* height: 300px; */
 }
 .card {
   width: 100%;
@@ -262,7 +279,7 @@ h4 {
   left: 0;
   height: 100%;
   display: flex;
-  width: 3000px;
+  width: 4600px;
   will-change: transform;
   gap: 1rem;
 }
@@ -271,4 +288,178 @@ h4 {
 }
 .card:nth-child(3) .avartar_details {
   width: 63%;
+}
+.testimonial_button {
+  border: 1px solid red;
+  width: 7%;
+  height: 2rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+.get_started_button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--BRIGHT_RED);
+  color: var(--GRAY);
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.get_started_button:hover {
+  background-color: hsl(12, 83%, 82%);
+}
+.simplify {
+  border: 1px solid black;
+  margin-top: 5rem;
+  height: 220px;
+  background-color: var(--BRIGHT_RED);
+}
+.team_section {
+  border: 1px solid white;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4.3rem;
+}
+.team_details {
+  border: 1px solid black;
+}
+h5 {
+  font-family: inherit;
+  color: var(--GRAY);
+  font-size: 2rem;
+  font-weight: 500;
+  width: 80%;
+  border: 1px solid green;
+}
+.simplify_button {
+  width: 7%;
+  height: 2rem;
+  margin-top: 1.5rem;
+}
+.white_button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: var(--BRIGHT_RED);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.white_button:hover {
+  color: hsl(12, 83%, 82%);
+}
+footer {
+  background-color: var(--VERY_DARK_BLUE);
+  height: 200px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+.footer_content {
+  border: 1px solid white;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.logo_footer {
+  filter: brightness(0) invert(1);
+}
+.facebook,
+.youtube,
+.twitter,
+.pinterest,
+.instagram {
+  margin-inline-end: 10px;
+}
+.left_content {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer_list {
+  list-style-type: none;
+}
+.footer_nav {
+  color: var(--GRAY);
+  font-weight: 500;
+}
+.mid_footer_content {
+  border: 1px solid white;
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+.right_footer_content {
+  border: 1px solid blue;
+  width: 20%;
+  display: flex;
+  gap: 1rem;
+}
+.left_footer_nav > ul > li:nth-child(2) {
+  margin-top: 0.72rem;
+}
+.left_footer_nav > ul > li:nth-child(3) {
+  margin-top: 0.72rem;
+}
+.left_footer_nav > ul > li:nth-child(4) {
+  margin-top: 0.72rem;
+}
+.right_footer_nav > ul > li:nth-child(2) {
+  margin-top: 0.72rem;
+}
+.right_footer_nav > ul > li:nth-child(3) {
+  margin-top: 0.72rem;
+}
+form {
+  border: 1px solid red;
+  width: 65%;
+}
+input {
+  height: 2.3rem;
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+}
+.footer_button {
+  height: 2.3rem;
+  width: 3rem;
+  border: 1px solid red;
+}
+.go {
+  border: 1px solid blue;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--BRIGHT_RED);
+  color: whitesmoke;
+  cursor: pointer;
+}
+.go:hover {
+  background-color: hsl(12, 83%, 82%);
+}
+.word {
+  position: absolute;
+  right: 5%;
+  color: var(--DARK_GRAYISH_BLUE);
+  font-family: inherit;
+}
+.footer_nav:hover {
+  color: var(--BRIGHT_RED);
+}
+.facebook,
+.youtube,
+.twitter,
+.pinterest,
+.instagram {
 }
