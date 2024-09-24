@@ -443,7 +443,17 @@ input {
 .footer_nav:hover {
   color: var(--BRIGHT_RED);
 }
-
+.email_error {
+  color: var(--BRIGHT_RED);
+  font-size: 0.8rem;
+  font-family: inherit;
+  position: absolute;
+  right: 15%;
+  top: 40%;
+}
+.hide {
+  display: none;
+}
 @media (min-width: 1024px) {
   nav {
     width: 35%;

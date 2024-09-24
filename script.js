@@ -4,6 +4,10 @@ const sliderContainer = document.querySelector(".slider_container");
 const cardSlide = document.querySelector(".card_slide");
 const items = Array.from(document.querySelectorAll(".card"));
 const testimonial = document.querySelector(".testimonial");
+const emailInput = document.querySelector("input");
+const goButton = document.querySelector(".go");
+const emailError = document.querySelector(".email_error");
+const form = document.querySelector("form");
 let clonesWidth;
 let sliderWidth;
 const clones = [];
@@ -54,3 +58,12 @@ function calculateDimensions() {
 }
 
 onLoad();
+goButton.addEventListener("click", () => {
+  const email = emailInput.value;
+  if (!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailError.classList.remove("hide");
+  } else {
+    emailError.classList.add("hide");
+    form.reset();
+  }
+});
