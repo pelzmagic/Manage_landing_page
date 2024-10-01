@@ -263,6 +263,9 @@ h4 {
   text-align: center;
   margin-top: 1rem;
 }
+.mobile_carousel_container {
+  display: none;
+}
 .slider_container {
   width: 100%;
   height: 250px;
@@ -347,7 +350,7 @@ h5 {
 .white_button:hover {
   color: hsl(12, 83%, 82%);
 }
-footer {
+.primary_footer {
   background-color: var(--VERY_DARK_BLUE);
   height: 200px;
   padding-top: 2.5rem;
@@ -454,6 +457,12 @@ input {
 .hide {
   display: none;
 }
+.hidden {
+  display: none;
+}
+.mobile_footer {
+  display: none;
+}
 @media (min-width: 1024px) {
   nav {
     width: 35%;
@@ -547,5 +556,836 @@ input {
 @media (min-width: 1334px) {
   .headline {
     font-size: 3rem;
+  }
+}
+@media (max-width: 545px) {
+  /* body {
+    background-color: red;
+  } */
+  nav {
+    display: none;
+  }
+  .started_button {
+    display: none;
+  }
+  .hero_content {
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+  }
+  .first_section {
+    flex-direction: column;
+    max-width: 95%;
+    margin: auto;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+  .second_section {
+    width: 95%;
+    margin: auto;
+    padding-left: 0;
+  }
+  .headline {
+    font-size: 3rem;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .headline-info {
+    max-width: 92%;
+    margin: auto;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .headline_button {
+    width: 32%;
+    margin: auto;
+  }
+  .more_info {
+    flex-direction: column;
+  }
+  .main {
+    margin-top: 3.5rem;
+  }
+  .first_info_section {
+    max-width: 95%;
+    margin: auto;
+    gap: 1.5rem;
+  }
+  .second_headline {
+    max-width: 70%;
+    margin: auto;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .second_headline_info {
+    max-width: 95%;
+    margin: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .second_info_section {
+    max-width: 95%;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+  .list_info1,
+  .list_info2,
+  .list_info3 {
+    max-width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  .numbered_items p {
+    grid-column: 1 / -1;
+  }
+  .numbered_items div::before {
+    padding: 0.5rem 1.7rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .slider_container {
+    display: none;
+  }
+  .mobile_carousel_container {
+    display: block;
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  .mobile_carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel_track {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 350ms ease-in;
+  }
+  .mobile_carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .mobile_card {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 225, 225, 0.788);
+    position: relative;
+  }
+  .previous_carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  .next_carousel_button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  li {
+    list-style-type: none;
+  }
+  .anisha,
+  .Richard,
+  .shanai {
+    width: 4rem;
+  }
+  .card_image {
+    width: 4rem;
+  }
+  .avartar_details {
+    width: 90%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .testimonial_button {
+    width: 25%;
+  }
+  .simplify {
+    margin-top: 3rem;
+    height: 300px;
+  }
+  .team_section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    justify-content: flex-start;
+  }
+  .team_details {
+    width: 73%;
+  }
+  h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.6rem;
+  }
+  .simplify_button {
+    width: 27%;
+    margin-top: 1.5rem;
+  }
+  .primary_footer {
+    display: none;
+  }
+  .mobile_footer {
+    display: block;
+    background-color: var(--VERY_DARK_BLUE);
+    position: relative;
+  }
+  .mobile_go {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--BRIGHT_RED);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .mobile_footer_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mobile_right_footer_content {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .go {
+    border: 0;
+  }
+  .footer_button {
+    width: 4rem;
+  }
+  .mobile_mid_footer_content {
+    display: flex;
+    gap: 5rem;
+    width: 60%;
+    margin: auto;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(4) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_footer_logo {
+    width: 40%;
+    margin: auto;
+  }
+  .mobile_left_content {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .facebook,
+  .youtube,
+  .twitter,
+  .pinterest,
+  .instagram {
+    width: 3rem;
+    margin-inline-end: 18px;
+  }
+  .mobile_contact_icons {
+    width: 70%;
+    margin: auto;
+  }
+  .mobile_word {
+    color: var(--DARK_GRAYISH_BLUE);
+    width: 69%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .mobile_email_error {
+    color: var(--BRIGHT_RED);
+    font-size: 0.8rem;
+    font-family: inherit;
+    position: absolute;
+    top: 16.2%;
+    left: 11%;
+  }
+}
+@media (max-width: 428px) {
+  nav {
+    display: none;
+  }
+  .started_button {
+    display: none;
+  }
+  .hero_content {
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+  }
+  .first_section {
+    flex-direction: column;
+    max-width: 95%;
+    margin: auto;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+  .second_section {
+    width: 95%;
+    margin: auto;
+    padding-left: 0;
+  }
+  .headline {
+    font-size: 2.3rem;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .headline-info {
+    max-width: 92%;
+    margin: auto;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .headline_button {
+    width: 32%;
+    margin: auto;
+  }
+  .more_info {
+    flex-direction: column;
+  }
+  .main {
+    margin-top: 3.5rem;
+  }
+  .first_info_section {
+    max-width: 95%;
+    margin: auto;
+    gap: 1.5rem;
+  }
+  .second_headline {
+    max-width: 70%;
+    margin: auto;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .second_headline_info {
+    max-width: 95%;
+    margin: auto;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .second_info_section {
+    max-width: 95%;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+  .list_info1,
+  .list_info2,
+  .list_info3 {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .numbered_items p {
+    grid-column: 1 / -1;
+  }
+  .numbered_items div::before {
+    padding: 0.3rem 1.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .slider_container {
+    display: none;
+  }
+  .mobile_carousel_container {
+    display: block;
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  .mobile_carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel_track {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 350ms ease-in;
+  }
+  .mobile_carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .mobile_card {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 225, 225, 0.788);
+    position: relative;
+  }
+  .previous_carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  .next_carousel_button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  li {
+    list-style-type: none;
+  }
+  .anisha,
+  .Richard,
+  .shanai {
+    width: 4rem;
+  }
+  .card_image {
+    width: 4rem;
+  }
+  .avartar_details {
+    width: 90%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .testimonial_button {
+    width: 25%;
+  }
+  .simplify {
+    margin-top: 3rem;
+    height: 270px;
+  }
+  .team_section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    justify-content: flex-start;
+  }
+  .team_details {
+    width: 73%;
+  }
+  h5 {
+    width: 100%;
+    text-align: center;
+  }
+  .simplify_button {
+    width: 27%;
+    margin-top: 1.5rem;
+  }
+  .primary_footer {
+    display: none;
+  }
+  .mobile_footer {
+    display: block;
+    background-color: var(--VERY_DARK_BLUE);
+    position: relative;
+  }
+  .mobile_go {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--BRIGHT_RED);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .mobile_footer_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mobile_right_footer_content {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .go {
+    border: 0;
+  }
+  .footer_button {
+    width: 4rem;
+  }
+  .mobile_mid_footer_content {
+    display: flex;
+    gap: 5rem;
+    width: 60%;
+    margin: auto;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(4) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_footer_logo {
+    width: 40%;
+    margin: auto;
+  }
+  .mobile_left_content {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .facebook,
+  .youtube,
+  .twitter,
+  .pinterest,
+  .instagram {
+    width: 2.3rem;
+    margin-inline-end: 18px;
+  }
+  .mobile_contact_icons {
+    width: 70%;
+    margin: auto;
+  }
+  .mobile_word {
+    color: var(--DARK_GRAYISH_BLUE);
+    width: 69%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .mobile_email_error {
+    color: var(--BRIGHT_RED);
+    font-size: 0.8rem;
+    font-family: inherit;
+    position: absolute;
+    top: 16.2%;
+    left: 11%;
+  }
+}
+@media (max-width: 375px) {
+  nav {
+    display: none;
+  }
+  .started_button {
+    display: none;
+  }
+  .hero_content {
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+  }
+  .first_section {
+    flex-direction: column;
+    max-width: 95%;
+    margin: auto;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+  .second_section {
+    width: 95%;
+    margin: auto;
+    padding-left: 0;
+  }
+  .headline {
+    font-size: 2rem;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .headline-info {
+    max-width: 92%;
+    margin: auto;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .headline_button {
+    width: 32%;
+    margin: auto;
+  }
+  .more_info {
+    flex-direction: column;
+  }
+  .main {
+    margin-top: 3.5rem;
+  }
+  .first_info_section {
+    max-width: 95%;
+    margin: auto;
+    gap: 1.5rem;
+  }
+  .second_headline {
+    max-width: 70%;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .second_headline_info {
+    max-width: 95%;
+    margin: auto;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .second_info_section {
+    max-width: 95%;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+  .list_info1,
+  .list_info2,
+  .list_info3 {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .numbered_items p {
+    grid-column: 1 / -1;
+  }
+  .numbered_items div::before {
+    padding: 0.3rem 1.3rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+  .numbered_items div {
+    position: relative;
+  }
+  /* h3::before {
+    content: "";
+    position: absolute;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: orange;
+  } */
+  .slider_container {
+    display: none;
+  }
+  .mobile_carousel_container {
+    display: block;
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  .mobile_carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel_track {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 350ms ease-in;
+  }
+  .mobile_carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .mobile_card {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 225, 225, 0.788);
+    position: relative;
+  }
+  .previous_carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  .next_carousel_button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+    border: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  li {
+    list-style-type: none;
+  }
+  .anisha,
+  .Richard,
+  .shanai {
+    width: 4rem;
+  }
+  .card_image {
+    width: 4rem;
+  }
+  .avartar_details {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .testimonial_button {
+    width: 25%;
+  }
+  .simplify {
+    margin-top: 3rem;
+    /* height: 270px; */
+  }
+  .team_section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    justify-content: flex-start;
+  }
+  .team_details {
+    width: 73%;
+  }
+  h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .simplify_button {
+    width: 27%;
+    margin-top: 1.5rem;
+  }
+  .primary_footer {
+    display: none;
+  }
+  .mobile_footer {
+    display: block;
+    background-color: var(--VERY_DARK_BLUE);
+    position: relative;
+  }
+  .mobile_go {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--BRIGHT_RED);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .mobile_footer_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mobile_right_footer_content {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .go {
+    border: 0;
+  }
+  .footer_button {
+    width: 4rem;
+  }
+  .mobile_mid_footer_content {
+    display: flex;
+    gap: 5rem;
+    width: 60%;
+    margin: auto;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_left_footer_nav > ul > li:nth-child(4) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(2) {
+    margin-top: 0.72rem;
+  }
+  .mobile_right_footer_nav > ul > li:nth-child(3) {
+    margin-top: 0.72rem;
+  }
+  .mobile_footer_logo {
+    width: 40%;
+    margin: auto;
+  }
+  .mobile_left_content {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .facebook,
+  .youtube,
+  .twitter,
+  .pinterest,
+  .instagram {
+    width: 2rem;
+    margin-inline-end: 15px;
+  }
+  .mobile_contact_icons {
+    width: 70%;
+    margin: auto;
+  }
+  .mobile_word {
+    color: var(--DARK_GRAYISH_BLUE);
+    width: 69%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .mobile_email_error {
+    color: var(--BRIGHT_RED);
+    font-size: 0.8rem;
+    font-family: inherit;
+    position: absolute;
+    top: 16%;
+    left: 11%;
   }
 }
