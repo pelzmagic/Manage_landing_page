@@ -17,7 +17,9 @@ const mobileSlideSize = mobileSlides[0].getBoundingClientRect().width;
 const mobileInputError = document.querySelector(".mobile_input");
 const mobileGoButton = document.querySelector(".mobile_go");
 const mobileEmailError = document.querySelector(".mobile_email_error");
-console.log(mobileSlides);
+const menuButton = document.querySelector(".mobile_nav_toggle");
+const navItems = document.querySelector(".nav_items");
+const body = document.querySelector("body");
 
 let clonesWidth;
 let sliderWidth;
@@ -25,6 +27,19 @@ const clones = [];
 let disableScroll = false;
 let scrollPosition;
 
+menuButton.addEventListener("click", (e) => {
+  const visibility = navItems.getAttribute("data-visible");
+
+  if (visibility === "false") {
+    navItems.setAttribute("data-visible", "true");
+    menuButton.setAttribute("aria-expanded", "true");
+    body.style.backgroundColor = "var(--DARK_GRAY)";
+  } else {
+    navItems.setAttribute("data-visible", "false");
+    menuButton.setAttribute("aria-expanded", "false");
+    body.style.backgroundColor = "var(--GRAY)";
+  }
+});
 const setMobileSlidePosition = (mobileSlide, index) => {
   mobileSlide.style.left = mobileSlideSize * index + "px";
 };
